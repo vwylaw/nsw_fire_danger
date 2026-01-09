@@ -16,11 +16,13 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
     """Set up the NSW Fire Danger component."""
     # Register the custom card static path
     www_path = os.path.join(os.path.dirname(__file__), "www")
-    hass.http.register_static_path(
-        f"/{DOMAIN}_ui",
-        www_path,
-        cache_headers=True
-    )
+    await hass.http.async_register_static_paths([
+        StaticPathConfig(
+            url_path=f"/{DOMAIN}_ui",
+            path=www_path,
+            cache_headers=True,
+        )
+    ])
 
     # Automatically register the Lovelace resource
     hass.async_create_task(_async_register_lovelace_resource(hass))
@@ -36,7 +38,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
 async def _async_register_lovelace_resource(hass: HomeAssistant) -> None:
     """Register Lovelace resource for the custom card."""
-    resource_url = f"/{DOMAIN}_ui/nsw-fire-danger-card.js?v=1.3.5"
+    resource_url = f"/{DOMAIN}_ui/nsw-fire-danger-card.js?v=1.3.6"
     
     # Check if Lovelace is available
     if "lovelace" not in hass.data:
