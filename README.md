@@ -6,7 +6,7 @@
 
 A custom Home Assistant integration that provides NSW Rural Fire Service fire danger ratings with a beautiful custom Lovelace card. Matches the official NSW RFS website design!
 
-![NSW Fire Danger Card](https://raw.githubusercontent.com/vwylaw/nsw_fire_danger/main/images/card-preview.png)
+![NSW Fire Danger Card](https://raw.githubusercontent.com/vwylaw/nsw_fire_danger/main/card-preview.png)
 
 ---
 
@@ -14,7 +14,7 @@ A custom Home Assistant integration that provides NSW Rural Fire Service fire da
 
 - 🎨 **Beautiful Custom Card**: Matches the official NSW RFS website design.
 - 🎯 **Semi-Circular Gauge**: Color-coded fire danger meter (Green → Yellow → Orange → Red).
-- 📅 **3-Day Forecast**: See fire danger for tomorrow, day 3, and day 4.
+- 📅 **3-Day Forecast**: See fire danger for tomorrow and the following two days by name (e.g., Saturday, Sunday).
 - 🚫 **Total Fire Ban Alerts**: Visual indicators and badges for fire ban status.
 - 🌏 **21 NSW Regions**: Full support for all NSW fire weather areas.
 - ⚙️ **Easy Configuration**: User-friendly dropdown UI for area selection.
@@ -82,12 +82,12 @@ For each configured area, mortality created 8 sensors:
 |-------------|-------------|
 | **Rating Today** | Current fire danger level (MODERATE, HIGH, EXTREME, CATASTROPHIC) |
 | **Rating Tomorrow** | Forecasted rating for tomorrow |
-| **Rating Day 3** | Forecasted rating for the day after tomorrow |
-| **Rating Day 4** | Forecasted rating for day 4 |
+| **Rating Day 3** | Forecasted rating for the second day (e.g. Saturday) |
+| **Rating Day 4** | Forecasted rating for the third day (e.g. Sunday) |
 | **Total Fire Ban Today** | Status for today (Yes/No) |
 | **Total Fire Ban Tomorrow** | Forecasted status for tomorrow |
-| **Total Fire Ban Day 3** | Forecasted status for day 3 |
-| **Total Fire Ban Day 4** | Forecasted status for day 4 |
+| **Total Fire Ban Day 3** | Forecasted status for the second day |
+| **Total Fire Ban Day 4** | Forecasted status for the third day |
 
 ---
 
