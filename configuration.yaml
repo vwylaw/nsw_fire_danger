@@ -1,0 +1,7 @@
+# Example configuration.yaml entry
+# Add this to your Home Assistant configuration.yaml file
+
+sensor:
+  - platform: nsw_fire_danger
+    area: "4"  # Area ID for Greater Sydney Region
+    area_name: "Greater Sydney Region"
