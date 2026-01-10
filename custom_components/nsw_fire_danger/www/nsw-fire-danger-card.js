@@ -293,7 +293,7 @@ window.customCards.push({
 });
 
 console.info(
-  '%c NSW-FIRE-DANGER-CARD %c Version 1.3.7 ',
+  '%c NSW-FIRE-DANGER-CARD %c Version 1.3.8 ',
   'color: white; background: #ce161e; font-weight: 700;',
   'color: #ce161e; background: white; font-weight: 700;'
 );
