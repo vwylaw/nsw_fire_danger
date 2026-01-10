@@ -9,6 +9,9 @@
     "issue_tracker": "https://github.com/vwylaw/nsw_fire_danger/issues",
     "integration_type": "service",
     "iot_class": "cloud_polling",
+    "after_dependencies": [
+        "http"
+    ],
     "requirements": [],
-    "version": "1.3.6"
+    "version": "1.3.7"
 }
